@@ -5,7 +5,7 @@
 
 /**********************************************************************
 name :
-function : 
+function :
 **********************************************************************/
 Buffer::Buffer( void )
 {
@@ -16,12 +16,12 @@ Buffer::Buffer( void )
 
 /**********************************************************************
 name :
-function : 
+function :
 **********************************************************************/
 void Buffer::store_char( uint8_t c)
 {
-	uint8_t i = ( uint8_t )( rx_Head +1 ) % SERIAL_BUFFER_MAX_SIZE;
-	
+	uint16_t i = ( uint16_t )( rx_Head +1 ) % SERIAL_BUFFER_MAX_SIZE;
+
 	if( i != rx_Tail )
 	{
 		RX_buff[rx_Head] = c;
